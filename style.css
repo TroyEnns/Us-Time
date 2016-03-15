@@ -1,0 +1,47 @@
+body{
+	height:100%;
+	width:100%;
+}
+.landing{
+	height:100vh;
+	width:100%;
+	background: url(images/background.jpg) no-repeat center center fixed; 
+	background-size: cover;
+}
+
+.interface{
+	color:white;
+	display:inline;
+	overflow:hidden;
+}
+.interfaceContainer{
+	margin-top:25%;
+	align:center;
+}
+.forms{
+	display:inline;
+}
+
+.interfaceButton{
+	background:transparent;
+	border: solid;
+	width:150px;
+
+}
+.interfaceButton:hover{
+	background-color:white;
+	opacity: .4;
+}
+#food{
+	display:none;
+}
+#movies{
+	display:none;
+}
+select{
+	color:black;
+}
+
+input{
+	color:black;
+}
