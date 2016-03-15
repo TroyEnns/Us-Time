@@ -1,21 +1,39 @@
 body{
-	height:100%;
-	width:100%;
-}
-.landing{
 	height:100vh;
 	width:100%;
 	background: url(images/background.jpg) no-repeat center center fixed; 
 	background-size: cover;
+	color:white;
+}
+.results{
+	background:rgba(0, 0, 0, 0.7);
+	width:70%;
+	align-self:center;
+	margin-left:15%;
+	margin-top:-10%;
+	height:500px;
+
+
+}
+#summaryDiv{
+	padding-top:15%;
+}
+
+#posterDiv{
+	padding-top:10%;
+}
+
+#poster{
+	height:300px;
+	width:auto;
 }
 
 .interface{
-	color:white;
 	display:inline;
 	overflow:hidden;
 }
 .interfaceContainer{
-	margin-top:25%;
+	margin-top:250px;
 	align:center;
 }
 .forms{
@@ -38,6 +56,10 @@ body{
 #movies{
 	display:none;
 }
+#movieResults{
+	display:none;
+}
+
 select{
 	color:black;
 }

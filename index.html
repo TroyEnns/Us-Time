@@ -15,9 +15,26 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+
+
+<nav class="navbar navbar-inverse">
+    <div class ="container-fluid">
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand">Troy Enns</a>
+    </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a class="navbarLinks">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.yelp.com/api">Yelp API</a></li>
+            <li><a href="http://netflixroulette.net/api/">Netflix roulette API</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="container-fluid">
     <div class = "row">
-        <div class = "col-xs-12 landing text-center">
+        <div class = "col-xs-12 text-center">
             <div class ="interfaceContainer">
                 <div id="decisions" class="interface">
                 <h1>Ouch. Your head.</h1>
@@ -28,12 +45,10 @@
                 <button class="btn interfaceButton" id="movieButton">
                 I need a movie
                 </button><br><br>
-                <!-- <button class="btn interfaceButton" id="both">
-                I need both
-                </button> -->
                 </div>
 
                 <div id="food" class="interface forms">
+                    <h1>What do you feel like eating?</h1>
                     <form id="foodForm">
                         <select class = "input-lg">
                             <option>American</option>
@@ -92,6 +107,31 @@
                         submit
                         </button>
                     </form>
+                </div>
+
+                <div id="movieResults" class="results">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-2">
+
+                            </div>
+                            <div class="col-xs-4 text-center" id="posterDiv">
+                                <img id ="poster" src="http:\/\/cdn-2.nflximg.com\/en_us\/boxshots\/ghd\/70299043.jpg">
+                                <br>
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </div>
+
+                            <div class="col-xs-4" id="summaryDiv">
+                                <h1 id="movieTitle">Attack On Titan</h1>
+                                <p id="movieSummary">For over a century, people have been living behind barricades to block out the giant Titans that threaten to destroy the human race. When a Titan destroys his hometown, young Eren Yeager becomes determined to fight back.</p><br>
+                                <button class="btn interfaceButton">new movie</button>
+                            </div>
+                            <div class="col-xs-2">
+                                
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
