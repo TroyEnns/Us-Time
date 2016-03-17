@@ -26,7 +26,7 @@
         <a href="#" class="navbar-brand">Troy Enns</a>
     </div>
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a class="navbarLinks">Home</a></li>
+            <li><a id="home">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="https://developer.edamam.com/recipe-docs">Edamam API</a></li>
@@ -92,10 +92,23 @@
                                 <h1><span id="score"></span>/10</h1>
                                 
                             </div>
-                            <div class="col-xs-6" id="foodInfo">
+                            <div class="col-xs-6 text-center" id="movieInfo">
                                 <h1 id="movieTitle"></h1>
                                 <p id="overview"></p>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <button class="btn interfaceButton" id="movieRedo">
+                                New Movie
+                                </button>
+                                <button class="btn interfaceButton" id="movieToRecipe">
+                                    now a meal
+                                </button> 
+                            </div>
+                            <div class="col-xs-6">
+
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -106,20 +119,26 @@
                             <div class="col-xs-6 text-center">
                                 <h1 id="foodName"></h1>
                                 <br>
-                                <img src="" id="foodImage"><br><br>                            
+                                <img src="" id="foodImage"><br><br><br>                            
                             </div>
                             <div class="col-xs-6" id="foodInfo">
-                                <center><h1>Ingredients</h1></center>
-                                <ul id="ingredients">
-                                    
-                                </ul>
+                                <center><h1>Ingredients</h1></center><br>
+                                <div id="ingredientContainer">   
+                                    <ul id="ingredients">
+                                        
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-6 text-center">
                                 <button class="btn interfaceButton" id="recipeRedo">
                                     new recipe
-                                </button>    
+                                </button>
+                                
+                                <button class="btn interfaceButton" id="recipeToMovie">
+                                    Now a movie
+                                </button>     
                             </div>
                             <div class="col-xs-6 text-center">
                                 <center>

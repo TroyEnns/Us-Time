@@ -8,6 +8,17 @@ $("#movieForm").on("submit",function(e){
    fetchMovie();
 });
 
+$("#recipeToMovie").on("click",function(){
+	$("#foodResults").fadeOut("slow",function(){
+		$("#movies").fadeIn("slow");
+	});
+});
+
+$("#movieToRecipe").on("click",function(){
+	$("#movieResults").fadeOut("slow",function(){
+		$("#food").fadeIn("slow");
+	});
+});
 
 $("#foodButton").on("click",function(){
 	foodIn();
@@ -41,7 +52,19 @@ $("#movieRedo").on("click",function(){
 	});
 });
 
+$("#home").on("click",function(){
+	$("#movies").fadeOut("slow",decisionsIn());
 
+	$("#movieResults").fadeOut("slow",decisionsIn());
+
+	$("#food").fadeOut("slow",decisionsIn());
+
+	$("#foodResults").fadeOut("slow",decisionsIn());
+});
+
+function decisionsIn(){
+	$("#decisions").delay(600).fadeIn("slow");
+}
 
 function fetchMovie(){
     var genre = $("#genres").val();
@@ -84,6 +107,7 @@ function fetchFood(){
 function clearFood(){
 	$("#foodName").empty();
 	$("#ingredients").empty();
+	$("#foodImage").attr("src","");
 }
 
 function clearMovie(){
