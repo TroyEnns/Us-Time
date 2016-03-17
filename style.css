@@ -11,19 +11,21 @@ body{
 	align-self:center;
 	margin-left:15%;
 	margin-top:-10%;
-	height:550px;
-	overflow-y:auto;
+/*	height:550px;
+*/	overflow-y:auto;
 
 
 }
-
+a.btn{
+	color:white;
+	text-decoration:none;
+}
 #summaryDiv{
 	height:100%;
 	padding:40px 50px 50px 20px;
 }
 
 #posterDiv{
-	height:100%;
 	padding-top:100px;
 	padding-bottom:150px;
 	position:fixed;
@@ -74,6 +76,8 @@ body{
 #foodResults{
 	display:none;
 	overflow-y:auto;
+	padding-top:20px;
+	padding-bottom:40px;
 }
 #foodInfo{
 	text-align:left;

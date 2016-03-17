@@ -14,6 +14,7 @@
     <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
     <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
 
@@ -28,8 +29,8 @@
             <li class="active"><a class="navbarLinks">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://www.yelp.com/api">Yelp API</a></li>
-            <li><a href="http://netflixroulette.net/api/">Netflix roulette API</a></li>
+            <li><a href="https://developer.edamam.com/recipe-docs">Edamam API</a></li>
+            <li><a href="https://www.themoviedb.org/documentation/api">The Movie Database API</a></li>
         </ul>
     </div>
 </nav>
@@ -59,14 +60,6 @@
                                 <option>Pork</option>
                                 <option>Vegetarian</option>
                                 <option>Vegan</option>
-                            </select>
-                        </div>
-                        <div class="foodContainer">
-                            <h1>Difficulty</h1>
-                            <select id="difficulty" class="input-lg">
-                                <option value="beginner">I'm totally lost</option>
-                                <option value="intermediate">I'm taking a cooking class</option>
-                                <option value="expert">I'm actually Martha Stewart</option>
                             </select>
                         </div>
                         <br><br>
@@ -111,17 +104,27 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-6 text-center">
-                                <br><br>
                                 <h1 id="foodName"></h1>
                                 <br>
-                                <img src="" id="foodImage">
-                                
+                                <img src="" id="foodImage"><br><br>                            
                             </div>
                             <div class="col-xs-6" id="foodInfo">
                                 <center><h1>Ingredients</h1></center>
                                 <ul id="ingredients">
                                     
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <button class="btn interfaceButton" id="recipeRedo">
+                                    new recipe
+                                </button>    
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <center>
+                                    <a href="" id="recipeLink" class="btn interfaceButton">full recipe</a>
+                                </center>
                             </div>
                         </div>
                     </div>

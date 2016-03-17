@@ -17,7 +17,12 @@ $("#foodForm").on("submit",function(event){
 	event.preventDefault();
 	fetchFood();
 	foodResultsIn();
+});
 
+$("#recipeRedo").on("click",function(){
+	$("#foodResults").fadeOut("slow",function(){
+		$("#food").fadeIn("slow");
+	});
 });
 
 $("#movieButton").on("click",function(){
@@ -49,8 +54,6 @@ function fetchMovie(){
 	    dataType: "jsonp"
         }).done(function(data){
 	    	movie = data.results[Math.floor(Math.random()*data.results.length)];
-	        console.log(movie);
-	        console.log(movie.original_title);
 	        clearMovie();
 	        $("#movieTitle").append(movie.original_title);
 			$("#score").append(movie.vote_average);
@@ -60,26 +63,27 @@ function fetchMovie(){
 }
 
 function fetchFood(){
-    var difficulty = $("#difficulty").val();
     var protein=$("#protein").val();
     var dish = {};
 
 	$.ajax({
 		"crossDomain": true,
-	    url:"https://api.edamam.com/search?q="+protein+"&yield=2&level="+difficulty+"&app_id=9db068e3&app_key=525eb025307f0606f3bccd6c0f7dfbe9",
+	    url:"https://api.edamam.com/search?q="+protein+"&yield=2&app_id=9db068e3&app_key=525eb025307f0606f3bccd6c0f7dfbe9",
 	    dataType: "jsonp"
         }).done(function(data){
-	    	// movie = data.results[Math.floor(Math.random()*data.results.length)];
 	        dish=data.hits[Math.floor(Math.random()*data.hits.length)].recipe;
-	        console.log(dish);
-	  //       console.log(movie.original_title);
-	  //       clearMovie();
+	        clearFood();
 	        $("#foodName").append(dish.label);
 			$("#foodImage").attr("src",dish.image);
+			$("#recipeLink").attr("href",dish.url);
 			for(i=0;i<dish.ingredientLines.length;i++){
 				$("#ingredients").append("<li>"+dish.ingredientLines[i]+"</li>");
 			}
 	 });
+}
+function clearFood(){
+	$("#foodName").empty();
+	$("#ingredients").empty();
 }
 
 function clearMovie(){
