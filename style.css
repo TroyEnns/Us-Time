@@ -11,16 +11,22 @@ body{
 	align-self:center;
 	margin-left:15%;
 	margin-top:-10%;
-	height:500px;
+	height:550px;
+	overflow-y:auto;
 
 
 }
+
 #summaryDiv{
-	padding-top:15%;
+	height:100%;
+	padding:40px 50px 50px 20px;
 }
 
 #posterDiv{
-	padding-top:10%;
+	height:100%;
+	padding-top:100px;
+	padding-bottom:150px;
+	position:fixed;
 }
 
 #poster{
@@ -36,9 +42,6 @@ body{
 	margin-top:250px;
 	align:center;
 }
-.forms{
-	display:inline;
-}
 
 .interfaceButton{
 	background:transparent;
@@ -53,15 +56,37 @@ body{
 #food{
 	display:none;
 }
+.foodContainer{
+	display:inline-block;
+	width:10%;
+	text-align:center;
+}
+#difficulty{
+	width:150px;
+}
 #movies{
 	display:none;
 }
 #movieResults{
 	display:none;
+	overflow-y:auto;
+}
+#foodResults{
+	display:none;
+	overflow-y:auto;
+}
+#foodInfo{
+	text-align:left;
+}
+#foodImage{
+	height:200px;
+	width:auto;
 }
 
 select{
 	color:black;
+	text-align:center;
+	padding:auto;
 }
 
 input{

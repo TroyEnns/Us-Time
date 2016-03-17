@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hangover Survival</title>
+	<title>Date Night</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -11,7 +11,8 @@
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
     <div class="navbar-header">
         <a href="#" class="navbar-brand">Troy Enns</a>
     </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
             <li class="active"><a class="navbarLinks">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -37,35 +38,38 @@
         <div class = "col-xs-12 text-center">
             <div class ="interfaceContainer">
                 <div id="decisions" class="interface">
-                <h1>Ouch. Your head.</h1>
+                <h1>An End to "I'm up for whatever"</h1>
                 <br>
                 <button class="btn interfaceButton" id="foodButton">
-                I need food
+                Lets make dinner
                 </button>
                 <button class="btn interfaceButton" id="movieButton">
-                I need a movie
+                lets watch a movie 
                 </button><br><br>
                 </div>
 
                 <div id="food" class="interface forms">
-                    <h1>What do you feel like eating?</h1>
                     <form id="foodForm">
-                        <select class = "input-lg">
-                            <option>American</option>
-                            <option>Chinese</option>
-                            <option>Indian</option>
-                            <option>Mexican</option>
-                            <option>Pizza</option>
-                            <option>Sushi</option>
-                            <option>Thai</option>
-                        </select>
-                        <select id="foodRating" class="input-lg">
-                            <option>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-                            <option>&#9733;&#9733;&#9733;&#9733;+</option>
-                            <option>&#9733;&#9733;&#9733;+</option>
-                            <option>&#9733;&#9733;+</option>
-                            <option>&#9733;+</option>
-                        </select><br><br>
+                        <div class="foodContainer">
+                            <h1>Protein</h1>
+                            <select id="protein" class = "input-lg">
+                                <option>Chicken</option>
+                                <option>Beef</option>
+                                <option>Fish</option>
+                                <option>Pork</option>
+                                <option>Vegetarian</option>
+                                <option>Vegan</option>
+                            </select>
+                        </div>
+                        <div class="foodContainer">
+                            <h1>Difficulty</h1>
+                            <select id="difficulty" class="input-lg">
+                                <option value="beginner">I'm totally lost</option>
+                                <option value="intermediate">I'm taking a cooking class</option>
+                                <option value="expert">I'm actually Martha Stewart</option>
+                            </select>
+                        </div>
+                        <br><br>
                         <button class ="btn interfaceButton" type="submit">
                             submit
                         </button>
@@ -74,34 +78,11 @@
 
                 <div id="movies" class="interface forms">
                     <form id = "movieForm">
-                        <h1>Genre</h1>
-                        <select id="genreSelect" class="input-lg">
-                            <option>All</option>
-                            <option>Action &amp; Adventure</option>
-                            <option>Anime</option>
-                            <option>Children &amp; Family</option>
-                            <option>Classic Movies</option>
-                            <option>Comedies</option>
-                            <option>Documentaries</option>
-                            <option>Dramas</option>
-                            <option>Faith &amp; Spirituality</option>
-                            <option>Foreign Movies</option>
-                            <option>Gay &amp; lesbian</option>
-                            <option>Horror</option>
-                            <option>Independent Movies</option>
-                            <option>Oscar-Winning</option>
-                            <option>Romance</option>
-                            <option>Sci-Fi &amp; Fantasy</option>
-                            <option>Sports</option>
-                            <option>Thrillers</option>
-                            <option>TV shows</option>
-                        </select>
+                        <h1>Genre &amp; minimum rating</h1>
+                        <select id="genres" class="input-lg">
+                        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <select id="movieRating" class="input-lg">
-                            <option>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-                            <option>&#9733;&#9733;&#9733;&#9733;+</option>
-                            <option>&#9733;&#9733;&#9733;+</option>
-                            <option>&#9733;&#9733;+</option>
-                            <option>&#9733;+</option>
+
                         </select><br><br>
                         <button type ="submit" class="btn interfaceButton">
                         submit
@@ -112,24 +93,36 @@
                 <div id="movieResults" class="results">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-2">
-
-                            </div>
-                            <div class="col-xs-4 text-center" id="posterDiv">
-                                <img id ="poster" src="http:\/\/cdn-2.nflximg.com\/en_us\/boxshots\/ghd\/70299043.jpg">
-                                <br>
-                                &#9733;&#9733;&#9733;&#9733;&#9734;
-                            </div>
-
-                            <div class="col-xs-4" id="summaryDiv">
-                                <h1 id="movieTitle">Attack On Titan</h1>
-                                <p id="movieSummary">For over a century, people have been living behind barricades to block out the giant Titans that threaten to destroy the human race. When a Titan destroys his hometown, young Eren Yeager becomes determined to fight back.</p><br>
-                                <button class="btn interfaceButton">new movie</button>
-                            </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-6 text-center">
+                                
+                                <img src="" id="poster">
+                                <h1><span id="score"></span>/10</h1>
                                 
                             </div>
+                            <div class="col-xs-6" id="foodInfo">
+                                <h1 id="movieTitle"></h1>
+                                <p id="overview"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="foodResults" class="results">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <br><br>
+                                <h1 id="foodName"></h1>
+                                <br>
+                                <img src="" id="foodImage">
+                                
+                            </div>
+                            <div class="col-xs-6" id="foodInfo">
+                                <center><h1>Ingredients</h1></center>
+                                <ul id="ingredients">
+                                    
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
