@@ -2,6 +2,21 @@ $(document).ready(function(){
 	movieList();
 	ratingList();
 });
+var playPause=1;
+
+
+
+
+$("#romanceButton").on("click",function(e){
+	e.preventDefault();
+	playPause++;
+	if(playPause%2===0){
+		$("#romantic")[0].play();
+	}else{
+		$("#romantic")[0].pause();
+	}
+
+});
 
 $("#movieForm").on("submit",function(e){
    e.preventDefault();
@@ -153,6 +168,3 @@ function movieResultsIn(){
 		$("#movieResults").fadeIn("slow");
 	});
 }
-
-
-

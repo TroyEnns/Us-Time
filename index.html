@@ -27,25 +27,24 @@
     </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a id="home">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
+            <li><a id="romanceButton">Romance Mode</a></li>
             <li><a href="https://developer.edamam.com/recipe-docs">Edamam API</a></li>
             <li><a href="https://www.themoviedb.org/documentation/api">The Movie Database API</a></li>
         </ul>
     </div>
 </nav>
-<div class="container-fluid">
+<div class="container-fluid" id="hailMary">
     <div class = "row">
         <div class = "col-xs-12 text-center">
             <div class ="interfaceContainer">
                 <div id="decisions" class="interface">
-                <h1>An End to "I'm up for whatever"</h1>
+                <h1>No more "I'm up for whatever"</h1>
                 <br>
                 <button class="btn interfaceButton" id="foodButton">
                 Lets make dinner
                 </button>
                 <button class="btn interfaceButton" id="movieButton">
-                lets watch a movie 
+                Lets watch a movie
                 </button><br><br>
                 </div>
 
@@ -142,13 +141,19 @@
                             </div>
                             <div class="col-xs-6 text-center">
                                 <center>
-                                    <a href="" id="recipeLink" class="btn interfaceButton">full recipe</a>
+                                    <a href="" id="recipeLink" target="_blank" class="btn interfaceButton">full recipe</a>
                                 </center>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-xs-12" id="romance">
+                                <audio id="romantic" src="media/whisper.mp3">
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

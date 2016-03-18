@@ -4,6 +4,7 @@ body{
 	background: url(images/background.jpg) no-repeat center center fixed; 
 	background-size: cover;
 	color:white;
+	background-repeat:no-repeat;
 }
 .results{
 	background:rgba(0, 0, 0, 0.7);
@@ -12,9 +13,9 @@ body{
 	margin-left:15%;
 	margin-top:-10%;
 	overflow-y:auto;
-
-
+	border-radius:10px;
 }
+
 a.btn{
 	color:white;
 	text-decoration:none;
@@ -77,8 +78,9 @@ a.btn{
 	overflow-y:auto;
 	padding-top:20px;
 	padding-bottom:40px;
-	padding-left:10px;
+	padding-left:20px;
 	padding-right:10px;
+	margin-bottom:30px;
 }
 #foodInfo{
 	text-align:left;
@@ -90,6 +92,9 @@ a.btn{
 #ingredientContainer{
 	width:60%;
 	margin-left:20%;
+}
+#romance{
+	display:none;
 }
 select{
 	color:black;
